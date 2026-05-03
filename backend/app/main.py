@@ -79,9 +79,11 @@ app = FastAPI(
 
 # ✅ CORS FIX (TEMP: allow all)
 
+
 app.add_middleware(
     CORSMiddleware,
-   "https://auto-merge-hack4-good.vercel.app",
+    allow_origins=[
+        "https://auto-merge-hack4-good.vercel.app",
         "http://localhost:3000",
         "http://127.0.0.1:3000",
     ],
